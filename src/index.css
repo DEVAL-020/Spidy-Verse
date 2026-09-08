@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-tech: 'Rajdhani', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #06070d;
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+}
+
+.font-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-tech {
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  contain: layout style;
+}
+
+.interactive-control {
+  touch-action: manipulation;
+  user-select: none;
+}
+
+@keyframes spiderSenseRing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.9;
+    border-color: #ef4444;
+  }
+
+  50% {
+    transform: scale(1.35);
+    opacity: 0.4;
+    border-color: #f59e0b;
+  }
+
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+    border-color: #ef4444;
+  }
+}
+
+.spider-sense-ring {
+  animation: spiderSenseRing 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+.glow-spider-red {
+  box-shadow: 0 0 35px -5px rgba(239, 68, 68, 0.45), 0 0 15px rgba(239, 68, 68, 0.25);
+}
+
+.glow-spider-blue {
+  box-shadow: 0 0 35px -5px rgba(14, 165, 233, 0.45), 0 0 15px rgba(14, 165, 233, 0.25);
+}
+
+.glow-spider-gold {
+  box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.45), 0 0 15px rgba(245, 158, 11, 0.25);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 15px rgba(239, 68, 68, 0.7), 0 0 30px rgba(239, 68, 68, 0.3);
+}
+
+.text-glow-cyan {
+  text-shadow: 0 0 15px rgba(6, 182, 212, 0.7), 0 0 30px rgba(6, 182, 212, 0.3);
+}
+
+.web-pattern {
+  background-image: radial-gradient(rgba(239, 68, 68, 0.12) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-1px, -1px);
+  }
+
+  60% {
+    transform: translate(2px, 1px);
+  }
+
+  80% {
+    transform: translate(1px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.animate-glitch {
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090b10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ef4444;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
